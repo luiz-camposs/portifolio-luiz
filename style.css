@@ -12,7 +12,7 @@ header{
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: black;
 }
 /* logo */
@@ -29,7 +29,7 @@ header a{
 
 /*menu*/
 
-.header-ul{
+/* .header-ul{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -49,7 +49,8 @@ header a{
 
 .header-ul li a:hover{
     border-bottom: 2px solid white;
-}
+} */
+
 
 /*botao*/
 .header-div-btn{
@@ -86,6 +87,7 @@ header a{
     justify-content: center;
     width: 40px;
     height: 40px;
+    
     font-size: 24px;
     color: white;
 }
@@ -202,4 +204,139 @@ footer{
 
 .btn-cont-2 i{
     font-size: 16px;
+}
+
+.mobile-menu{
+        display: none;
+        cursor: pointer;
+    }
+    
+    .mobile-menu div{
+        width: 32px;
+        height: 2px;
+        background-color: white;
+        margin: 8px;
+    }
+
+/*celular*/
+
+@media (max-width: 480px) {
+    
+    main{
+        flex-direction: row;
+    }
+    .left{
+    }
+    #left-text{
+        padding: 0;
+        width: 50vw;
+        height: 80vh;
+    }
+    #left-text h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+        height: 20vh;
+    }
+    #left-text p{
+        width: 99vw;
+        height: 60vh;
+        padding: 20px;
+    }
+    .right{
+        width: 50vw;
+        height: 20vh;
+    }
+    #img-luiz{
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+    }
+}   
+/*tablet*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    main{
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-logo{
+        width: 125px;
+        height: 125px;
+    }
+    .header-btn-logo{
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-btn-logo a i{
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+        color: white;
+    }
+    .header-btn-logo a i:hover{
+    font-size: 50px;
+    color: black;
+    }
+
+    .left{
+        width: 100vw;
+        height: 50vh;
+        align-items: baseline;
+    }
+    #left-text h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 106px;
+
+    }
+    #left-text{
+        padding: 50px;
+        width: 100vw;
+        height: 40vh;
+    }
+    #left-text p{  
+        font-size: 36px;
+    }
+    .right{
+        border: 1px solid red;
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+/* 
+
+
+.header-btn-logo a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: white;
+}
+
+.header-btn-logo a i:hover{
+    font-size: 24px;
+    color: black;
+} */ 
+
+/*notbook*/
+
+
+@media (min-width: 769px) and (max-width: 1279px) {
+
 }
