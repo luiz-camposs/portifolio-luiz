@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body.dark{
+    --bg: black;
+    --text: white;
+    --senai: rgb(255, 128, 0);
+}
+
+body.dark .ri-moon-line{
+    display: none;
+}
+
+body.dark #header-a-dark{
+    display: none;
+}
+
+
+
+
+body.white{
+    --bg: white;
+    --text: black;
+    --senai: rgb(255, 128, 0);
+}
+body.white .ri-sun-line{
+    display: none;
+}
+
+body.white #header-a-white{
+    display: none;
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -12,8 +43,8 @@ header{
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: black;
+    justify-content: space-evenly;
+    background-color: var(--bg);
 }
 /* logo */
 
@@ -21,10 +52,25 @@ header a{
     text-decoration: none;
     display: flex;
 }
-#header-logo{
+
+#header-a-white{
+    text-decoration: none;
+    display: flex;
+}
+
+#header-logo-white{
+    width: 75px;
+    height: 75px; 
+}
+
+#header-a-dark{
+    text-decoration: none;
+    display: flex;
+}
+
+#header-logo-dark{
     width: 75px;
     height: 75px;
-    
 }
 
 /*menu*/
@@ -67,14 +113,14 @@ header a{
     height: 40px;
     border: none;
     border-radius: 50px;
-    background-color: black;
+    background-color: var(--bg);
     cursor: pointer;
     transition: 0.5s;
 }
 
 .header-btn-logo:hover{
-    background-color: white;
-    box-shadow: 0 0 20px white;
+    background-color: var(--text);
+    box-shadow: 0 0 20px var(--text);
 }
 
 .header-btn-logo a{
@@ -87,22 +133,64 @@ header a{
     justify-content: center;
     width: 40px;
     height: 40px;
-    
     font-size: 24px;
-    color: white;
+    color: var(--text);
 }
 
 .header-btn-logo a i:hover{
     font-size: 24px;
-    color: black;
+    color: var(--bg);
 }
+
+.mudar-tema{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--text);
+    border-radius: 50px;
+    background-color: var(--bg);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.mudar-tema:hover{
+    background-color: var(--bg);
+    box-shadow: 0 0 20px var(--text);
+}
+
+.mudar-tema a{
+    text-decoration: none;
+}
+
+.mudar-tema a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: var(--text);
+}
+
+.mudar-tema i{
+    color: var(--text);
+    font-size: 24px;
+}
+
+.mudar-tema a i:hover{
+    font-size: 24px;
+    color: var(--text);
+}
+
 /* main-1*/
 
 main{
     width: 100vw;
     height: 80vh;
     display: flex;
-    background-color: black;
+    background-color: var(--bg);
 }
 
 .left{
@@ -121,7 +209,7 @@ main{
 
 #left-text h1{
     font-size: 92px;
-    color: white;
+    color: var(--text);
 }
 
 #nome{
@@ -133,13 +221,13 @@ main{
 }
 
 #senai{
-    color: rgb(255, 128, 0);
+    color: var(--senai);
     font-weight: 700;
 }
 
 #left-text p{
     font-size: 24px;
-    color: white;
+    color: var(--text);
 }
 
 .right{
@@ -154,8 +242,8 @@ main{
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 20px white;
+    border: 2px solid var(--text);
+    box-shadow: 0 0 20px var(--text);
 }
 
 
@@ -164,7 +252,7 @@ main{
 footer{
     width: 100vw;
     height: 10vh;
-    background-color: black;
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +263,7 @@ footer{
     height: 50px;
     border-radius: 100px;
     border: none;
-    background-color: white;
+    background-color: var(--text);
     transition: 0.5s;
     display: flex;
     align-items: center;
@@ -184,14 +272,14 @@ footer{
 }
 
 .btn-cont-2:hover{
-    background-color: white;
-    box-shadow: 0 0 20px white;
+    background-color: var(--text);
+    box-shadow: 0 0 20px var(--text);
 }
 
 .btn-cont-2 a{
     text-decoration: none;
     font-size: 14px;
-    color: black;
+    color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,24 +290,12 @@ footer{
 }
 
 .btn-cont-2 a:hover{
-    color: black;
+    color: var(--bg);
 }
 
 .btn-cont-2 i{
     font-size: 16px;
 }
-
-.mobile-menu{
-        display: none;
-        cursor: pointer;
-    }
-    
-    .mobile-menu div{
-        width: 32px;
-        height: 2px;
-        background-color: white;
-        margin: 8px;
-    }
 
 /*celular*/
 

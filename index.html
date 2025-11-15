@@ -9,9 +9,10 @@
     <meta name="description" content="Portfólio pessoal desenvolvido em HTML, CSS e JavaScript para apresentar habilidades de front-end, com layout moderno, responsivo e interativo.">
     <title>WebSite</title>
 </head>
-<body>
+<body class="dark">
     <header>
-        <a href="#"><img id="header-logo" src="./img/logo.svg" alt=""></a>
+        <a href="#" id="header-a-white"><img id="header-logo-white" src="./img/logo-white.svg" alt=""></a>
+        <a href="#" id="header-a-dark"><img id="header-logo-dark" src="./img/logo-dark.svg" alt=""></a>
         <!-- <ul class="header-ul">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -28,7 +29,10 @@
 
             <button class="header-btn-logo"><a href="https://x.com/luizvivencias"><i class="ri-twitter-x-line"></i></a></button>
         </div>
-            <button><i class="ri-sun-line"></i></button>
+            <button onclick="mudarTema()" class="mudar-tema">
+                <i class="ri-sun-line"></i>
+                <i class="ri-moon-line"></i>
+            </button>
     </header>
 
     <main>
